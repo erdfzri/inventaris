@@ -7,7 +7,7 @@
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
         <div>
             <h2 style="font-size: 1.125rem; font-weight: 700;">Items Table</h2>
-            <p style="font-size: 0.8125rem; color: var(--text-muted);">Add, delete, update <span style="color: #db2777;">.items</span></p>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Add, delete, update</p>
         </div>
         <div style="display: flex; gap: 1rem;">
             <a href="{{ route('admin.items.export') }}" class="btn" style="background: #6366f1; color: white;">

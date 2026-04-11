@@ -96,7 +96,7 @@
     <div class="main-content">
         <header class="top-bar">
             <div style="display: flex; align-items: center; gap: 1.5rem;">
-                <button style="background: none; border: none; font-size: 1.25rem; color: var(--text-muted); cursor: pointer;"><i class="fas fa-bars"></i></button>
+                {{-- <button style="background: none; border: none; font-size: 1.25rem; color: var(--text-muted); cursor: pointer;"><i class="fas fa-bars"></i></button> --}}
                 <div style="display: flex; align-items: center; gap: 1rem;">
                     <img src="https://ui-avatars.com/api/?name={{ auth()->user()->name }}&background=EBF4FF&color=7F9CF5" alt="Avatar" style="width: 40px; border-radius: 50%;">
                     <span style="font-weight: 600; font-size: 1.125rem;">Welcome Back, {{ auth()->user()->name }}</span>

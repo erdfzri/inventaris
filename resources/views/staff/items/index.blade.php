@@ -6,7 +6,7 @@
 <div class="card">
     <div style="margin-bottom: 2rem;">
         <h2 style="font-size: 1.125rem; font-weight: 700;">Items Table</h2>
-        <p style="font-size: 0.8125rem; color: var(--text-muted);">Data <span style="color: #db2777;">.items</span></p>
+        <p style="font-size: 0.8125rem; color: var(--text-muted);">Data</p>
     </div>
 
     <div class="table-container" style="border: none;">

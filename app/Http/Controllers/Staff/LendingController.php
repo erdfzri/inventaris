@@ -44,7 +44,7 @@ class LendingController extends Controller
         foreach ($request->items as $itemData) {
             $item = Item::find($itemData['id']);
             if ($itemData['total'] > $item->available_stock) {
-                return redirect()->back()->with('error', 'Total item more than available!')->withInput();
+                return redirect()->back()->with('error', 'Jumlah item lebih banyak dari yang tersedia!')->withInput();
             }
         }
 
@@ -64,7 +64,7 @@ class LendingController extends Controller
             }
         });
 
-        return redirect()->route('staff.lendings.index')->with('success', 'Success add new lending item!');
+        return redirect()->route('staff.lendings.index')->with('success', 'Berhasil menambahkan item peminjaman!');
     }
 
     public function returnItem($id)
@@ -72,7 +72,7 @@ class LendingController extends Controller
         $detail = LendingDetail::findOrFail($id);
         $detail->update(['return_date' => now()]);
 
-        return redirect()->back()->with('success', 'Item is returned!');
+        return redirect()->back()->with('success', 'Item telah dikembalikan!');
     }
 
     public function destroy($id)
@@ -81,7 +81,7 @@ class LendingController extends Controller
         $lending->delete(); // This deletes it from DB. 
         // Available stock logic is automatic because available_stock accessor exclusion of non-returned items
         
-        return redirect()->back()->with('success', 'Lending deleted!');
+        return redirect()->back()->with('success', 'Peminjaman berhasil dihapus!');
     }
 
     public function export()

@@ -36,8 +36,17 @@ class ItemController extends Controller
             'total_stock' => 'required|integer|min:0',
         ]);
 
-        Item::create($request->all());
-        return redirect()->route('admin.items.index')->with('success', 'Item created.');
+        $item = Item::where('category_id', $request->category_id)
+            ->where('name', $request->name)
+            ->first();
+
+        if ($item) {
+            $item->increment('total_stock', $request->total_stock);
+        } else {
+            Item::create($request->all());
+        }
+
+        return redirect()->route('admin.items.index')->with('success', 'Item berhasil disimpan.');
     }
 
     public function update(Request $request, Item $item)
@@ -55,13 +64,13 @@ class ItemController extends Controller
         }
 
         $item->update($data);
-        return redirect()->route('admin.items.index')->with('success', 'Item updated.');
+        return redirect()->route('admin.items.index')->with('success', 'Item berhasil diperbarui.');
     }
 
     public function destroy(Item $item)
     {
         $item->delete();
-        return redirect()->route('admin.items.index')->with('success', 'Item deleted.');
+        return redirect()->route('admin.items.index')->with('success', 'Item berhasil dihapus.');
     }
 
     public function export()

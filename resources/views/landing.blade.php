@@ -33,7 +33,7 @@
         .hero-text p {
             font-size: 1.25rem;
             color: var(--text-muted);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
         .hero-image {
             width: 45%;
@@ -42,13 +42,7 @@
         .hero-image img {
             width: 100%;
             border-radius: 30px;
-            box-shadow: var(--shadow-lg);
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+            /* box-shadow: var(--shadow-lg); */
         }
         nav {
             position: fixed;
@@ -74,7 +68,7 @@
 
     <section class="hero">
         <div class="hero-text animate-fade-in">
-            <h1>Kelola Aset Sekolah dengan <span style="color: var(--primary);">Cerdas.</span></h1>
+            <h1>Kelola Aset Sekolah dengan Cerdas.</h1>
             <p>Sistem inventarisasi modern untuk mempermudah peminjaman, pemantauan stok, dan pelaporan barang secara real-time.</p>
             <div style="display: flex; gap: 1rem;">
                 <button onclick="showLogin()" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1rem;">Mulai Sekarang</button>
@@ -82,7 +76,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000" alt="Inventory">
+            <img src="https://st2.depositphotos.com/26922084/46735/v/450/depositphotos_467358706-stock-illustration-inventory-management-with-goods-demand.jpg" alt="Inventory">
         </div>
     </section>
 

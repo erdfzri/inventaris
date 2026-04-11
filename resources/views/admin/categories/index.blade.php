@@ -7,7 +7,7 @@
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
         <div>
             <h2 style="font-size: 1.125rem; font-weight: 700;">Categories Table</h2>
-            <p style="font-size: 0.8125rem; color: var(--text-muted);">Add, delete, update <span style="color: #db2777;">.categories</span></p>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Add, delete, update</p>
         </div>
         <button onclick="showAddModal()" class="btn" style="background: #10b981; color: white;">
             <i class="fas fa-plus-square"></i> Add

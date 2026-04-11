@@ -40,7 +40,7 @@ class UserController extends Controller
         
         $user->update(['password' => Hash::make($passwordPlain)]);
 
-        return redirect()->back()->with('success', 'User created. Password: ' . $passwordPlain);
+        return redirect()->back()->with('success', 'Pengguna berhasil dibuat. Password: ' . $passwordPlain);
     }
 
     public function update(Request $request, User $user)
@@ -59,13 +59,13 @@ class UserController extends Controller
         }
         $user->save();
 
-        return redirect()->back()->with('success', 'User updated.');
+        return redirect()->back()->with('success', 'Pengguna berhasil diperbarui.');
     }
 
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->back()->with('success', 'User deleted.');
+        return redirect()->back()->with('success', 'Pengguna berhasil dihapus.');
     }
 
     public function resetPassword(User $user)
@@ -77,7 +77,7 @@ class UserController extends Controller
         $user->is_default_password = true;
         $user->save();
 
-        return redirect()->back()->with('success', 'Password reset. New password: ' . $passwordPlain);
+        return redirect()->back()->with('success', 'Password berhasil direset. Password baru: ' . $passwordPlain);
     }
 
     public function export($role)

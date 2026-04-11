@@ -22,7 +22,7 @@ class CategoryController extends Controller
             'division_pj' => 'required'
         ]);
         Category::create($request->all());
-        return redirect()->route('admin.categories.index')->with('success', 'Category created.');
+        return redirect()->route('admin.categories.index')->with('success', 'Kategori berhasil dibuat.');
     }
 
     public function update(Request $request, Category $category)
@@ -32,12 +32,12 @@ class CategoryController extends Controller
             'division_pj' => 'required'
         ]);
         $category->update($request->all());
-        return redirect()->route('admin.categories.index')->with('success', 'Category updated.');
+        return redirect()->route('admin.categories.index')->with('success', 'Kategori berhasil diperbarui.');
     }
 
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route('admin.categories.index')->with('success', 'Category deleted.');
+        return redirect()->route('admin.categories.index')->with('success', 'Kategori berhasil dihapus.');
     }
 }
